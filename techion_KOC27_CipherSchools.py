@@ -10,8 +10,7 @@ if pin == user['pin']:
         print("What do you want to do?")
         print(" Enter 1 to Widthdraw Cash \n Enter 2 to deposit Cash \n Enter 3 to Quit")
 
-        query = int(
-            input("Enter the number corresponding to the activity you want to do: "))
+        query = int(input("Enter the number corresponding to the activity you want to do: "))
 
         if query == 1:
             amount = int(input("Enter the amount of money you want to widthdraw: "))
@@ -21,6 +20,7 @@ if pin == user['pin']:
                 user['balance'] = user['balance'] - amount
                 print(f"{amount} Rupees successfully widthdrawn your remaining balance is {user['balance']} Money")
                 print('')
+                print("Thankyou for Choosing Python ATM")
         elif query == 2:
             amount = int(input("Enter the amount  of money you want to deposit:"))
             if amount == user['balance']:
@@ -29,6 +29,7 @@ if pin == user['pin']:
                 user['balance'] = user['balance'] + amount
                 print(f"{amount}Money sucessfully deposited your remaining balance is {user['balance']} Money")
             print('')
+            print("Thankyou for Choosing Python ATM")
         elif query == 3:
             print("Thankyou for choosing Python ATM")
             print("Please visit Again")
